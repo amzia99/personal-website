@@ -13,6 +13,11 @@ body {
   padding: 0;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
 /* Header */
 header {
   background: #333;
@@ -214,4 +219,99 @@ form button:hover {
       font-size: 16px;
       padding: 10px;
   }
+}
+/* Default Light Mode */
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --header-bg: #333;
+  --header-text: white;
+  --button-bg: #007BFF;
+  --button-text: white;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --bg-color: #181818;
+  --text-color: #f4f4f4;
+  --header-bg: #121212;
+  --header-text: #ffffff;
+  --button-bg: #ffcc00;
+  --button-text: #333;
+}
+
+/* Apply Theme Variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 20px;
+  text-align: center;
+}
+
+.theme-toggle {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
+}
+/* Smooth Animations */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Interactive Navigation */
+nav ul li a {
+  font-size: 18px;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--button-bg);
+  font-weight: bold;
+}
+
+/* Button Hover */
+.btn {
+  transition: transform 0.2s ease-in-out, background 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Portfolio Hover Effect */
+.project img {
+  transition: transform 0.3s ease;
+}
+
+.project img:hover {
+  transform: scale(1.1);
+}
+/* Parallax Background */
+.parallax {
+  background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
 }
